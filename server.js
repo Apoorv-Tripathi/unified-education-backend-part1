@@ -18,9 +18,10 @@ const app = express();
 // CORS CONFIG
 // *********************
 const allowedOrigins = [
-  process.env.FRONTEND_URL,   // Vercel frontend (production)
-  "http://localhost:3000",    // Local frontend (development)
-  "http://127.0.0.1:3000",    // Alternate localhost
+  process.env.FRONTEND_URL,                 // Production frontend (Vercel)
+  "https://unified-education-frontend-part1.vercel.app", // Explicit allow
+  "http://localhost:3000",                  // Local dev
+  "http://127.0.0.1:3000"
 ];
 
 app.use(
